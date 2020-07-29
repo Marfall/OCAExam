@@ -1,0 +1,194 @@
+(8) Which of the following command line switches is required (independent of each other) to run a modular application stored in c:\modules\movies.jar?
+A - -m c:\modules\movies.jar
+B - -p c:\modules\movies.jar
+C - -p c:\modules
+D - --path c:\modules\movies.jar
+E - --module-path c:\modules
+
+(14)Which of the following are valid command line options and their one character shortcuts related to the Java module system?
+A - --module -p
+B - --module-path -p
+C - --module-source-path -s
+D - ---module-source-path -m
+E - --list-modules -l
+F - --show-module-resolution -s
+G - --module -m
+
+(82)Consider the following directory structure and the files contained in the directories:  
+c:\javatest   
+    +- <src>        
+        +- <foo.bar>              
+            +- <foo>                  
+                +- <bar>                        
+                    -- BazA.java                        
+                    -- BazB.java   
+Assuming that the package name specified in BazA and BazB is foo.bar, which of the following statements are correct?
+A - There should be a module-info.java file in the src directory for it to be a valid module definition.
+B - The foo.bar directory is a valid source module definition.
+C - There should be a module-info.java file in the foo.bar directory for it to be a valid source module definition.
+D - There should be a module.java file in the foo directory for it to be a valid module definition.
+E - There should be a module-info.java file in the bar directory for it to be a valid source module definition.
+F -  
+There should be a module.java file in the foo.bar directory for it to be a valid module definition.
+
+(89)Which of the following tools support the --show-module-resolution option?
+A - java
+B - javac
+C - jar
+D - jmod
+E - jmod
+
+_______________
+
+(36)Which of the following statements are true?
+A - private keyword can never be applied to a class.
+B - synchronized keyword can never be applied to a class.
+C - synchronized keyword may be applied to a non-primitive variable.
+D - final keyword can never be applied to a class.
+E - A final variable can be hidden in a subclass.
+
+(46)What does the zeroth element of the string array passed to the standard main method contain?
+A - The name of the class.
+B - The string "java".
+C - The number of arguments.
+D - The first argument of the argument list, if present.
+E - None of the above.
+
+(51) What will be the output of the following program (excluding the quotes)?  
+public class SubstringTest{
+    public static void main(String args[]){
+        String String = "string isa string";       
+        System.out.println(String.substring(3, 6));    
+    } 
+}
+A - It will not compile.
+B - "ing is"
+C - "ing isa"
+D - "ing isa"
+E - None of the above.
+
+(56)What is meant by "encapsulation" ?
+A - There is no way to access member variable.
+B - There are no member variables.
+C - Member fields are declared private and public accessor/mutator methods are provided to access and change their values if needed.
+D - Data fields are declared public and accessor methods are provided to access and change their values.
+
+(57)Which of the following are benefits of polymorphism?
+A - It makes the code more reusable.
+B - It makes the code more reusable.
+C - It protects the code by preventing extension.
+D - It makes the code more dynamic.
+
+(62)Is it possible to create arrays of length zero?
+A - Yes, you can create arrays of any type with length zero.
+B - Yes, but only for primitive datatypes.
+C - Yes, but only for arrays of object references
+D - Yes, and it is same as a null Array.
+E - No, arrays of length zero do not exist in Java.
+
+(64)Which of the following are true about the "default" constructor?
+A - It is provided by the compiler only if the class does not define any constructor.
+B - It initializes the instance members of the class.
+C - It calls the no-args constructor of the super class.
+D - It initializes instance as well as class fields of the class.
+E - It is provided by the compiler if the class does not define a 'no-args' constructor.
+
+(73)What will the following code print?  
+public class TestClass{    
+    static char ch;   
+    static float f;   
+    static boolean bool;   
+ 
+    public static void main(String[] args){
+         System.out.print(f);
+         System.out.print(" ");
+         System.out.print(ch);
+         System.out.print(" ");
+         System.out.print(bool);
+    } 
+}
+A - 0.0   false
+B - 0.0f   false
+C - 0.0 0 false
+D - 0.0   true
+E - 0.0f   true
+F - 0.0f 0 true
+
+(76) Java Module system achieves which of the following objectives for a Java project?
+A - It encapsulates the project.
+B - It encapsulates the packages.
+C - It provides a central repository for keeping classes.
+D - It enables a project to manage multiple versions of dependencies.
+E - It provides a reliable mechanism to let components of an application specify their dependencies on each other.
+F - It provides a way to specify services and declare dependence on such services.
+
+(78)Consider the following variable declaration within the definition of an interface:   int i = 10; Which of the following declarations defined in a non-abstract class, is equivalent to the above?
+A - public static int i = 10;
+B - public final int i = 10;
+C - public static final int i = 10;
+D - public int i = 10;
+E - final int i = 10;
+
+(80)Consider the following code written by a new developer:  
+while(true){
+         //additional valid code
+         if(isDone()) break;
+ }  
+What can be done to make this code more readable?
+A - Use a for loop 
+B - Use the enhanced for loop
+C - use do-while instead of while.
+D - Use continue instead of break.
+
+(81)Given:
+
+class Triangle{
+    public int base;
+    public int height;
+    public double area = 0;
+    
+    public Triangle(int pBase, int pHeight){
+        this.base = pBase; this.height = pHeight;
+        updateArea();
+    }
+    public void updateArea(){
+        double a = base*height/2;
+        area = a;
+    }
+    public void setBase(int b){ base  = b; updateArea(); }
+    public void setHeight(int h){ height  = h; updateArea(); }
+}
+Which variables are not accessible from anywhere within given class code except from the scope in which they are declared?
+A - base, height, area
+B - area, b, h
+C - base, height
+D - b, h, a
+
+(90)Which of these statements concerning the charAt() method of the String class are true? 
+A - The charAt( ) method can take a char value as an argument.
+B - The charAt( ) method returns a Character object.
+C - The expression char ch = "12345".charAt(3) will assign 3 to ch.
+D - The expression char ch = str.charAt(str.length()) where str is "12345", will assign 3 to ch.
+E - The index of the first character is 0.
+F - It throws StringIndexOutOfBoundsException if passed a value higher than or equal to the length of the string (or less than 0).
+G - It throws ArrayIndexOutOfBoundsException if passed an value higher than or equal to the length of the string (or less than 0).
+
+ANSWERS :
+8 - B,C,E
+14 - B,F
+82 - C
+89 - A
+______
+36 - B,E
+46 - D
+51 - E (It will print 'ing'. (No space after 'g'))
+56 - C
+57 - A,D
+62 - A
+64 - A,C
+73 - A
+76 - B,E,F
+78 - C
+80 - C
+81 - D
+90 - A,E
